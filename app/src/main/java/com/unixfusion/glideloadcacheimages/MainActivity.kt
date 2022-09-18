@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         Glide.with(this)
             .load(imageUrl)
+            .skipMemoryCache(true)
+            .placeholder(R.drawable.ic_image_placeholder)
+            .centerCrop()
             .into(binding.ivMain)
     }
 
@@ -31,17 +34,16 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         const val KEY_IMAGE_URL = "KEY_IMAGE_URL"
+
         val imageList = listOf(
-            "https://unsplash.com/photos/ff11JzQk690",
-            "https://unsplash.com/photos/UJ5neyuKtjg",
-            "https://unsplash.com/photos/n1L3kBf1CWQ",
-            "https://unsplash.com/photos/I2MvIfi7JcY",
-            "https://unsplash.com/photos/75lAzi1jn3w",
-            "https://unsplash.com/photos/tsUNxs1Owoc",
-            "https://unsplash.com/photos/n0bdvrBqHlQ",
-            "https://unsplash.com/photos/sUbOjcqu5KE",
-
-
+            "https://images.unsplash.com/photo-1662581872277-0fd0bf3ae8f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80",
+            "https://images.unsplash.com/photo-1663402989770-4c5bd9254896?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "https://images.unsplash.com/photo-1663401632253-be16144831e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "https://images.unsplash.com/photo-1663352260439-72a606f78e20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "https://images.unsplash.com/photo-1663298262574-77253fd2f075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "https://images.unsplash.com/photo-1663259775826-17ba21903c3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=691&q=80",
+            "https://images.unsplash.com/photo-1663339698906-0216d5c406bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1279&q=80",
+            "https://images.unsplash.com/photo-1663342849470-478b08ace7b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         )
     }
 }
